@@ -1,28 +1,39 @@
 *{
-  margin:0;
+  margin:0px;
   padding:0;
   box-sizing: border-box;
+}
+body{
+  width:90%;
+  margin:auto;
+}
+header{
+  top:0px;  
+  width:100%;
+  position: fixed;
+  margin-bottom:2em;
 }
 nav{
   font-family: 'Poppins', sans-serif;
   display:flex;
   justify-content: space-around;
   width:90%;
-  margin:auto;
-  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  max-height:55px;
+  background: white;
+  overflow:hidden;
 }
-.logo
+nav .logo
 {
   font-size: 40px;
   font-family: 'Luckiest Guy', cursive ;
-  padding: 10px;
+  align-items: center;
   text-transform: uppercase;
   letter-spacing: 10px;
-  
-  
+ 
 }
 
-ul{
+.nav-links{
   background-color: #dddddd;
   list-style-type: none;
   margin: 0;
@@ -39,19 +50,47 @@ a{
   
  
 }
-li{
+nav li{
   float: left;
   border-right:white 2px solid;
 }
-li:nth-child(4)
+.nav-links li:nth-child(4)
 {
   float:right;
   border-right:none;
+  border-left:white 2px solid;
 }
-li .nav-link:hover:not(.active){
+nav li .nav-link:hover:not(.active){
   background: #111;
   color:white;
 }
 .active{
   border-bottom:black 2px solid;
+
+}
+
+
+
+/* HOMEPAGE */
+main{
+  position: relative;
+  bottom:-3em;
+  font-family: 'Poppins', sans-serif;
+   margin:1em;
+   z-index:-23;
+}  
+section{
+  padding:2em;
+  margin:2em 0 2em 0 ;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ 
+}
+.cards{
+  border:solid black 1px;
+  min-height:100em;
+  min-width:70em;
+  float:left;
+  margin:2em;
+  padding:2em;
+  overflow:auto;
 }
