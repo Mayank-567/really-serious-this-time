@@ -21,7 +21,7 @@ nav{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   max-height:55px;
   background: white;
-  overflow:hidden;
+ 
 }
 nav .logo
 {
@@ -30,16 +30,19 @@ nav .logo
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 10px;
+  
  
 }
 
 .nav-links{
+  display:flex;
   background-color: #dddddd;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  
   width:90%;
+  justify-content: space-around;
  }
 a{
   display: block;
@@ -50,47 +53,102 @@ a{
   
  
 }
-nav li{
-  float: left;
-  border-right:white 2px solid;
-}
-.nav-links li:nth-child(4)
-{
-  float:right;
-  border-right:none;
-  border-left:white 2px solid;
-}
-nav li .nav-link:hover:not(.active){
+nav li .nav-link:hover:not(.current){
   background: #111;
-  color:white;
+  color:#dddddd;
 }
-.active{
+.current{
   border-bottom:black 2px solid;
 
 }
 
 
-
-/* HOMEPAGE */
 main{
   position: relative;
   bottom:-3em;
   font-family: 'Poppins', sans-serif;
-   margin:1em;
-   z-index:-23;
+  margin:1em;
+  z-index:-23;
 }  
 section{
   padding:2em;
   margin:2em 0 2em 0 ;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
- 
+}
+.burger{
+  cursor:pointer;
+  align-items: center;
+  margin:auto;
+  display: none;
+
+
+}
+.burger div
+{
+  margin:5px;
+  width: 25px;
+  height:3px;
+  background: #111;
+  align-items: center;
+  transition: transform ease-in-out 0.5s;
+  
+  
+}
+    .burger.active .line1{
+      transform: rotate(45deg);
+      position:relative;
+      bottom:-4px;
+      width:13px;
+      right:-14px;
+    }
+    .burger.active .line3{
+      transform: rotate(-45deg);
+      position:relative;
+      top:-4px;
+      width:13px;
+      right:-14px;
+    }
+     nav .nav-links.mobile{
+      display:inline-block;
+      flex-direction: column ;
+      position: relative;;
+      top:8vh;
+      background:white;
+      
+      height:100%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    
+    @media screen and (max-width:820px){
+      
+      .burger{
+        display:block;
+       
+     }
+     .nav-links{
+       display:none;
+     }
+    
+    }
+    
+.nav-links.mobile .current{
+  background: #111;
+  color:#dddddd;
+}
+/* HOMEPAGE */
+.card-lists{
+  list-style: none;
+  overflow:auto;
+  width:100%;
+  margin: 0 7em 0 7em;
 }
 .cards{
-  border:solid black 1px;
-  min-height:100em;
-  min-width:70em;
+  margin:auto;
   float:left;
-  margin:2em;
-  padding:2em;
-  overflow:auto;
+  min-width:400px;
+  min-height:500px;
+  background:green;
+  margin: .1em;
+  align-items: center;
 }
+
