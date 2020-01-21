@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    text-align:center;
+    margin:1em;
+}
+section{
+    display: flex;
+    justify-content: center;
+    /* background: lightblue; */
+    margin: 1em;
+    padding : 1em;
+}
+.card{
+    /* background:lightblue; */
+    height:55vh;
+    width:45vh;
+    box-shadow: 0  10px 6px 7px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: white;
+    transition: 1s;
+}
+.front img{
+    /* display:none; */
+    width:45vh;
+    
+}
+h2{
+    text-align: center;
+}
+.front{
+    /* display:none; */
+}
+.open{
+    padding:1em 1.5em;
+    transform: translateY(-55vh);
+    opacity: 0;
+    /* background: green; */
+}
+i{
+    padding-right:.5em;
+    padding-bottom:.5em ;
+}
+.links a{
+    text-decoration: none;
+    color:rgb(46, 39, 39)
+
+}
+.links{
+    display:flex;
+    flex-direction: column;
+    /* padding:1em .1em; */
+    /* background: red; */
+    width: fit-content;
+}
+
+
+
+
+
+.card:hover .front h2{
+    display: none;
+}
+.card:hover{
+    display:flex;
+    width:80%;
+
+}
+.card:hover img{
+    padding: .7em 1em;
+    height:100%;
+}
+.card:hover .front{
+    justify-content: flex-start;
+    display:flex;
+}
+.open:hover h2{
+    /* background: red; */
+    text-align:left;
+    padding-bottom: 1em;
+}
+.card:hover .open{
+    opacity: 1;
+    transform:translateY(0);
+}

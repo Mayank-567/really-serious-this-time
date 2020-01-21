@@ -1,0 +1,119 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: poppins;
+    color: white;
+}
+body{
+    background: #00b621;
+
+}
+
+#title{
+    text-shadow: -1px 1px 0px #0066cc,
+    -2px 2px 0px #0066cc,
+    -3px 3px 0px #0066cc,
+    -4px 4px 0px #0066cc,
+    -5px 5px 0px #0066cc,
+    -6px 6px 0px #0066cc,
+    -7px 7px 0px #0066cc,
+    -8px 8px 0px #0066cc,
+
+    -15px 15px 2px black;
+    /* color:dodgerblue; */
+    padding: 1em 2em;
+    transform-style: preserve-3d;
+    transform: rotate(3deg) skew(22deg);
+    text-transform: uppercase;
+    text-align: center;
+    font-size:3.4em;
+}
+#description{
+    padding-left: 5em;
+}
+h4{
+    text-shadow: 2px 2px 2px black;
+    display: block;
+}
+form{
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    width:35vw;
+
+}
+input,textarea{
+    margin:.3em 0;
+    border:1px solid;
+    resize: none;
+    padding:.5em;
+    box-shadow: 5px 5px 0px black ;
+}
+.radiobuttons,.checkboxes{
+    display:flex;
+    justify-content: space-between;
+    
+    margin:.3em 0;
+}
+.radiobuttons input , .checkboxes input{
+    width:100%;
+    height: 100%;
+    box-shadow: none;
+    /* opacity: 0; */
+    transform: translate();
+    /* cursor: pointer; */
+}
+
+.container{
+    width:1.5em;
+    height: 1.5em;
+    background-color: #ddd;
+    cursor: pointer;
+    position: relative;
+ 
+}
+.container:hover{
+    background-color: #ccc;
+}
+.checkboxes .checked{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: none;
+    transform: translate(-1.5em);
+    /* z-index: -1; */
+}
+.radiobuttons .checked{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: none;
+    transform: translate(-1.5em);
+    z-index: -3;
+}
+.checked::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width:.0;
+    height:0;
+    border:3px solid transparent;
+    border-width: 0 3px 3px 0;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-60%) rotate(45deg);
+    transition: .3s;
+}
+input:checked ~ .checked{
+    background-color: dodgerblue;
+
+}
+ input:checked ~ .checked::after{
+    border-color: white;
+    width:.3em;
+    height:.7em;
+
+}
